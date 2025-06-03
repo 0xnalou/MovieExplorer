@@ -47,7 +47,6 @@ public struct HeaderToasterView: View {
             RoundedRectangle(cornerRadius: MovieExplorer.size16)
                 .stroke(MovieExplorer.colorRedTertiary, lineWidth: 1)
         }
-//        .applyEffects(LivePayments.dropshadowLarge)
     }
     
     private var iconView: some View {
@@ -63,15 +62,11 @@ public struct HeaderToasterView: View {
     
     private var titleView: some View {
         Text(title)
-//            .font(LivePayments.fontsLabelStandard400L4)
-//            .foregroundColor(LivePayments.mainPrimaryNeutralOnPrimary)
             .frame(maxWidth: .infinity, alignment: .topLeading)
     }
     
     private var subtitleView: some View {
         Text(subtitle)
-//            .font(LivePayments.fontsLabelStandard400L5)
-//            .foregroundColor(LivePayments.mainPrimaryNeutralOnPrimary)
             .frame(maxWidth: .infinity, alignment: .topLeading)
     }
     
@@ -80,7 +75,6 @@ public struct HeaderToasterView: View {
             .renderingMode(.template)
             .resizable()
             .frame(width: MovieExplorer.size24, height: MovieExplorer.size24)
-//            .foregroundStyle(LivePayments.mainPrimaryNeutralOnSecondary)
             .onTapGesture { closeAction?() }
     }
 }

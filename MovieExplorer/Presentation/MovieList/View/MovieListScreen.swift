@@ -18,6 +18,7 @@ struct MovieListScreen: View {
         }
         .handleCommonViewModel(using: viewModel)
         .navigationTitle("🎬 Movie Explorer")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     var movieList: some View {
@@ -35,11 +36,20 @@ struct MovieListScreen: View {
                     }
                 }
             }
+            
+            if viewModel.state.isLoading {
+                HStack {
+                    Spacer()
+                    ProgressView()
+                        .padding()
+                    Spacer()
+                }
+                .listRowSeparator(.hidden)
+            }
         }
         .clipped()
         .refreshable {
             viewModel.action.reloadMovies()
         }
-        .animation(.default, value: viewModel.state.isLoading)
     }
 }

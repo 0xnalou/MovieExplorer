@@ -18,22 +18,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         
-//        if let windowScene = scene as? UIWindowScene {
-//            setupHUDWindow(in: windowScene)
-//        }
+        if let windowScene = scene as? UIWindowScene {
+            setupHUDWindow(in: windowScene)
+        }
     }
 }
 
 private extension SceneDelegate {
-//    func setupHUDWindow(in scene: UIWindowScene) {
-//        let hudWindow = UIPassThroughWindow(windowScene: scene)
-//        let swiftUIContent = HUDWindow()
-//            .environmentObject(globalUIState)
-//        
-//        let controller = UIHostingController(rootView: swiftUIContent)
-//        controller.view.backgroundColor = .clear
-//        hudWindow.rootViewController = controller
-//        hudWindow.isHidden = false
-//        self.hudWindow = hudWindow
-//    }
+    func setupHUDWindow(in scene: UIWindowScene) {
+        let hudWindow = UIPassThroughWindow(windowScene: scene)
+        let swiftUIContent = HUDWindow()
+            .environmentObject(globalUIState)
+        
+        let controller = UIHostingController(rootView: swiftUIContent)
+        controller.view.backgroundColor = .clear
+        hudWindow.rootViewController = controller
+        hudWindow.isHidden = false
+        self.hudWindow = hudWindow
+    }
 }

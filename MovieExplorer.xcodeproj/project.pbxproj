@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67114E812DED32A800092877 /* MVVMCModule in Frameworks */ = {isa = PBXBuildFile; productRef = 67114E802DED32A800092877 /* MVVMCModule */; };
 		67114EA72DED361700092877 /* NetworkingModule in Frameworks */ = {isa = PBXBuildFile; productRef = 67114EA62DED361700092877 /* NetworkingModule */; };
 		67114F622DEE5DAD00092877 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 67114F612DEE5DAD00092877 /* RealmSwift */; };
 		67114F632DEE5DBC00092877 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 67114F612DEE5DAD00092877 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		67114F7B2DEEC85000092877 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 67114F7A2DEEC85000092877 /* Kingfisher */; };
+		67114F852DEED1FA00092877 /* MVVMCModule in Frameworks */ = {isa = PBXBuildFile; productRef = 67114F842DEED1FA00092877 /* MVVMCModule */; };
+		67114F8B2DEED97500092877 /* MVVMCModule in Frameworks */ = {isa = PBXBuildFile; productRef = 67114F8A2DEED97500092877 /* MVVMCModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,9 +93,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67114F7B2DEEC85000092877 /* Kingfisher in Frameworks */,
+				67114F8B2DEED97500092877 /* MVVMCModule in Frameworks */,
 				67114F622DEE5DAD00092877 /* RealmSwift in Frameworks */,
+				67114F852DEED1FA00092877 /* MVVMCModule in Frameworks */,
 				67114EA72DED361700092877 /* NetworkingModule in Frameworks */,
-				67114E812DED32A800092877 /* MVVMCModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +169,11 @@
 			);
 			name = MovieExplorer;
 			packageProductDependencies = (
-				67114E802DED32A800092877 /* MVVMCModule */,
 				67114EA62DED361700092877 /* NetworkingModule */,
 				67114F612DEE5DAD00092877 /* RealmSwift */,
+				67114F7A2DEEC85000092877 /* Kingfisher */,
+				67114F842DEED1FA00092877 /* MVVMCModule */,
+				67114F8A2DEED97500092877 /* MVVMCModule */,
 			);
 			productName = MovieExplorer;
 			productReference = 670FE1F52DEC993100F7B414 /* MovieExplorer.app */;
@@ -252,8 +258,9 @@
 			mainGroup = 670FE1EC2DEC993100F7B414;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				67114E7F2DED32A800092877 /* XCRemoteSwiftPackageReference "SwiftUI-MVVMC-Core" */,
 				67114F602DEE5DAD00092877 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				67114F792DEEC85000092877 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				67114F892DEED97500092877 /* XCRemoteSwiftPackageReference "SwiftUI-MVVMC-Core" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 670FE1F62DEC993100F7B414 /* Products */;
@@ -622,14 +629,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		67114E7F2DED32A800092877 /* XCRemoteSwiftPackageReference "SwiftUI-MVVMC-Core" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/0xnalou/SwiftUI-MVVMC-Core.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		67114F602DEE5DAD00092877 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -638,14 +637,25 @@
 				version = 10.52.1;
 			};
 		};
+		67114F792DEEC85000092877 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
+		67114F892DEED97500092877 /* XCRemoteSwiftPackageReference "SwiftUI-MVVMC-Core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xnalou/SwiftUI-MVVMC-Core.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		67114E802DED32A800092877 /* MVVMCModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67114E7F2DED32A800092877 /* XCRemoteSwiftPackageReference "SwiftUI-MVVMC-Core" */;
-			productName = MVVMCModule;
-		};
 		67114EA62DED361700092877 /* NetworkingModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkingModule;
@@ -654,6 +664,20 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 67114F602DEE5DAD00092877 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		67114F7A2DEEC85000092877 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67114F792DEEC85000092877 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		67114F842DEED1FA00092877 /* MVVMCModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MVVMCModule;
+		};
+		67114F8A2DEED97500092877 /* MVVMCModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67114F892DEED97500092877 /* XCRemoteSwiftPackageReference "SwiftUI-MVVMC-Core" */;
+			productName = MVVMCModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

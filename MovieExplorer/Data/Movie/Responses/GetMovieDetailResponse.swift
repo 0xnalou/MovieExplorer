@@ -1,13 +1,11 @@
 //
-//  GetMovieListResponse.swift
+//  GetMovieDetailResponse.swift
 //  MovieExplorer
 //
 //  Created by Nalou Nguyen on 3/6/25.
 //
 
-import Foundation
-
-struct GetMovieListResponse: Codable {
+struct GetMovieDetailResponse: Codable {
     let page: Int
     let results: [MovieModel]
     let totalPages: Int
@@ -20,5 +18,3 @@ struct GetMovieListResponse: Codable {
         case totalResults = "total_results"
     }
 }
-
-

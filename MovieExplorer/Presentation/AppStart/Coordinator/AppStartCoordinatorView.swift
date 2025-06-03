@@ -20,6 +20,7 @@ struct AppStartCoordinatorView: View {
     
     var body: some View {
         appCoordinator.startMovieListScreen()
+            .toastView(toast: $toast)
             .onAppear(perform: {
                 appCoordinator.appOnAppear()
             })

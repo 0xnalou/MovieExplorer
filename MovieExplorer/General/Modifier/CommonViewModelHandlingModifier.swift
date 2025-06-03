@@ -14,19 +14,12 @@ struct CommonViewModelHandlingModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-//            .onReceive(viewModel.commonState.toastPublisher) { toast in
-//                withAnimation {
-//                    globalUIState.toast = toast
-//                }
-//            }
-//            .onReceive(viewModel.commonState.popupAlert) { popup in
-//                globalUIState.popupAlert = popup
-//            }
-//            .onReceive(viewModel.commonState.fullscreenErrorPublisher) { error in
-//                globalUIState.errorFullScreen = error
-//            }
+            .onReceive(viewModel.commonState.toastPublisher) { toast in
+                withAnimation {
+                    globalUIState.toast = toast
+                }
+            }
             .onAppear {
-//                print("✏️ \(viewModel.typeName.replacingOccurrences(of: "ViewModel", with: "Screen")) is displayed")
                 viewModel.commonAction.onViewAppear()
             }
     }

@@ -101,6 +101,10 @@ private extension MovieListViewModel {
                     
                     state.movies = currentMovies
                 }else {
+                    let toast = Toast(title: "No Internet Access",
+                                      subtitle: "Plese check your intertnet connection",
+                                      icon: "")
+                    showToast(toast)
                     if !isFetchedLocal {
                         state.movies = try await getAllLocalMovieUseCase.execute()
                     }
@@ -108,7 +112,10 @@ private extension MovieListViewModel {
                 
 
             } catch {
-//                showGenericErrorPopup()
+                let toast = Toast(title: "Error",
+                                  subtitle: error.localizedDescription,
+                                  icon: "")
+                showToast(toast)
             }
         }
     }

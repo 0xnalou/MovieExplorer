@@ -20,3 +20,4 @@ typealias NavigationController = MVVMCModule.NavigationController
 typealias SheetPath = MVVMCModule.SheetPath
 
 typealias Dependency = MVVMCModule.Dependency
+typealias Toast = MVVMCModule.Toast
