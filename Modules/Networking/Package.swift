@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Networking",
+    name: "NetworkingModule",
     platforms: [
         .iOS(.v17)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Networking",
-            targets: ["Networking"]),
+            name: "NetworkingModule",
+            targets: ["NetworkingModule"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.9.0")
@@ -21,13 +21,13 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Networking",
+            name: "NetworkingModule",
             dependencies: [
                 .product(name: "Alamofire", package: "Alamofire")
             ]),
         .testTarget(
-            name: "NetworkingTests",
-            dependencies: ["Networking"]
+            name: "NetworkingModuleTests",
+            dependencies: ["NetworkingModule"]
         ),
     ]
 )
