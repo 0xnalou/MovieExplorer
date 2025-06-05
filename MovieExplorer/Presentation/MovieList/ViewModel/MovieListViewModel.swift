@@ -8,10 +8,8 @@
 import Foundation
 
 final class MovieListViewModel: BaseViewModelImpl, BaseViewModel {
-    // MARK: - State
     @Published private(set) var state: MovieListState
     
-    // MARK: - Action
     var action: MovieListAction {
         return MovieListAction(
             loadMovies: loadMovies,
@@ -20,7 +18,6 @@ final class MovieListViewModel: BaseViewModelImpl, BaseViewModel {
         )
     }
     
-    // MARK: - Properties
     private let getMovieListUseCase: GetMovieListUseCase
     private let storageLocalMoviesUseCase: StorageLocalMoviesUseCase
     private let getAllLocalMovieUseCase: GetAllLocalMovieUseCase
@@ -51,8 +48,6 @@ final class MovieListViewModel: BaseViewModelImpl, BaseViewModel {
 
     }
 }
-
-// MARK: TransactionHistoryAction
 
 private extension MovieListViewModel {
     func loadMovies() {

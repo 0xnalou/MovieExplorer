@@ -10,10 +10,6 @@ import SwiftUI
 
 
 final class MovieDetailCoordinator: BaseCoordinator<MovieDetailDependency, MovieDetailViewModel>, Coordinator {
-//    var movieListCoordinator: MovieListCoordinator
-
-//    private let showWelcomeScreenPublisher = PassthroughSubject<Void, Never>()
-
     init(
         detail: MovieModel,
         navigationController: NavigationController,

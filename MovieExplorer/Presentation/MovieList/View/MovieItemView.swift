@@ -16,14 +16,6 @@ struct MovieItemView: View {
     
     public var body: some View {
         HStack(spacing: 16) {
-//            AsyncImage(url: movie.posterURL) { image in
-//                image.resizable()
-//            } placeholder: {
-//                Color.gray
-//            }
-//            .frame(width: 60, height: 90)
-//            .cornerRadius(8)
-            
             KFImage(movie.posterURL)
                 .resizable()
                 .placeholder {

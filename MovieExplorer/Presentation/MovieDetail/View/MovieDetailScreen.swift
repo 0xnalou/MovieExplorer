@@ -23,21 +23,6 @@ struct MovieDetailScreen: View {
                     .fade(duration: 0.3)
                     .aspectRatio(contentMode: .fit)
                     .shadow(radius: 6)
-                
-//                AsyncImage(url: viewModel.state.movie.posterURL) { image in
-//                    image
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(maxWidth: .infinity)
-//                        .clipShape(RoundedRectangle(cornerRadius: 16))
-//                        .padding(.horizontal)
-//                        .shadow(radius: 6)
-//                } placeholder: {
-//                    Color.gray.frame(height: 300)
-//                }
-//                .aspectRatio(contentMode: .fit)
-//                .cornerRadius(16)
-//                .shadow(radius: 6)
 
                 VStack(alignment: .leading, spacing: 8) {
                     Text(viewModel.state.movie.title)

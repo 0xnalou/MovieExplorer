@@ -10,11 +10,9 @@ import Alamofire
 
 public class NetworkClient: Networking {
     
-    // MARK: - Properties
     private var hostDomain: String
     private var session: Session
     
-    // MARK: - Initializers
     public init?() {
         let container = NetworkDependencyContainer.shared
         guard let config = container.makeConfigProvider() else {
@@ -39,8 +37,6 @@ public class NetworkClient: Networking {
             eventMonitors: [networkMonitor]
         )
     }
-    
-    // MARK: - Networking
     
     public func request(_ request: any APIRequest) async -> Result<APIResponse, APIError> {
         await withCheckedContinuation { continuation in

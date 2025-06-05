@@ -18,8 +18,6 @@ public protocol APIRequest {
     var body: RequestBody? { get }
 }
 
-
-//MARK: - Default value
 public extension APIRequest {
     var body: RequestBody? {
         return nil

@@ -15,7 +15,6 @@ final class DefaultHeaderProviderImpl: DefaultHeaderProvider {
             commonHeaders[Constants.HeaderKey.authorization] = "Bearer \(accessToken)"
         }
         
-        
         commonHeaders[Constants.HeaderKey.contentType] = Constants.HeaderValue.contentType
         
         return commonHeaders
